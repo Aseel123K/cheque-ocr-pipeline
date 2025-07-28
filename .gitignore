@@ -1,0 +1,17 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtualenv
+.venv/
+env/
+ENV/
+
+# Data/output
+*.xlsx
+*.parquet
+
+# OS/IDE junk
+.DS_Store
+.idea/
+.vscode/
