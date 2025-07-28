@@ -21,14 +21,29 @@ This project automates the extraction and classification of fields from cheque i
 ## 📁 Project Structure
 
 ```
-cheque-ocr-classifier/
+Cheque-OCR/
+├── data/                  # Input Parquet files folder
+│   └── .gitkeep
+├── outputs/               # Excel output files
+│   └── .gitkeep
+├── docs/                  # Report and screenshots
+│   ├── Cheque_OCR_Report.pdf
+│   └── output_sample.png
 │
-├── main.py                # Entry point for training & prediction
-├── requirements.txt       # Python dependencies
-├── README.md              # Project overview and instructions
-├── assets/                # Screenshots or Excel output examples
-├── data/                  # (optional) Parquet files
-└── outputs/               # Excel output files
+├── .gitignore             # Should ignore .venv/, __pycache__, outputs/* etc 
+├── README.md              # Project overview
+├── requirements.txt       # All dependencies 
+│
+├── main.py                # Main entry point 
+├── config.py              # Contains constants like directories 
+├── data_loader.py         # Loads Parquet & handles input 
+├── model_trainer.py       # Builds TF-IDF + classifier pipeline 
+├── ocr.py                 # Runs Tesseract OCR 
+├── predictor.py           # Generates predictions & saves Excel 
+└── utils.py               # Shared helper functions 
+
+
+
 ```
 
 ---
